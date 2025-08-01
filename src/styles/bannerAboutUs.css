@@ -1,0 +1,71 @@
+.contabilidade-section {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+}
+
+.contabilidade-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.lead-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.contabilidade-section h2 {
+  font-size: 1.8rem;
+  margin: 1.5rem 0 1rem;
+  color: #2c3e50;
+}
+
+.avaliacoes-lista, .servicos-lista {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.avaliacoes-lista li, .servicos-lista li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.rating {
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 2rem 0;
+}
+
+.destaques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.destaque-item {
+  flex: 1;
+  min-width: 250px;
+}
+
+.destaque-item strong {
+  font-size: 1.3rem;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.destaque-item p {
+  line-height: 1.5;
+  color: #666;
+}

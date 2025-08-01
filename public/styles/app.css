@@ -1,0 +1,205 @@
+html {
+
+  /* Scrollbar para navegadores WebKit (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 8px;
+    /* Largura mais adequada para interação */
+    height: 8px;
+    /* Para scrollbars horizontais */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* Fundo sutil */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #b0c4de;
+    /* Azul suave */
+    border-radius: 10px;
+    border: 2px solid transparent;
+    /* Borda transparente para efeito de padding */
+    background-clip: content-box;
+    /* Mantém o background apenas na área visível */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #9bb4d1;
+    /* Tom levemente mais escuro no hover */
+  }
+
+  /* Scrollbar para Firefox */
+  * {
+    scrollbar-width: thin;
+    /* "auto" ou "thin" */
+    scrollbar-color: #b0c4de #f1f1f1;
+    /* thumb e track */
+  }
+
+  /* Efeito de transição suave (opcional) */
+  ::-webkit-scrollbar-thumb {
+    transition: background-color 0.3s ease;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
+  font-size: 14px !important;
+}
+
+.titulo {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.3;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.slick-slide {
+  margin: 10px;
+}
+
+.slick-slide .bg-white.p-4.rounded-lg.shadow-lg.text-left {
+  height: 320px;
+}
+
+.siteTitulo {
+  font-family: 'Lato', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(0, 40, 104);
+}
+
+.siteSubTitulo {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(0, 0, 0);
+}
+
+.smallText {
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  color: rgb(66, 66, 66);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  #root>div>main>section.py-16.bg-white>div>div.overflow-x-auto.rounded-lg>table>thead>tr>th:nth-child(2)>div {
+    font-size: 0.8rem !important;
+  }
+
+  .h-full.w-full.bg-white.shadow-lg.border-2.border-gray-100.pl-4.pr-4.pt-8.rounded-t-2xl.hover\:border-blue-700.transition-all.duration-300.ease-in-out {
+    min-width: 120px;
+  }
+
+  .btn-contratar {
+    font-size: 0.8rem !important;
+    padding: "2px" !important;
+    margin: 0px !important;
+  }
+
+  #p.text-xs.text-gray-500.my-6 {
+    font-size: 0.6rem !important;
+  }
+
+  .text-4xl.font-bold.text-blue-900.my-2 {
+    font-size: 1.5rem;
+  }
+
+  .font-bold.text-blue-900.mb-1.text-2xl.md\:text-1xsm.h-20 {
+    font-size: 1.2rem !important;
+  }
+
+  .tab-plan-button {
+    font-size: 0.8rem !important;
+    padding: 5px 10px !important;
+  }
+
+  .descPlan {
+    height: auto !important;
+    min-width: 200px !important;
+  }
+
+  .inline-block.bg-white.shadow.p-4.rounded-lg.w-72.mx-3.h-50 {
+    min-height: 180px;
+  }
+
+  .table-plans {
+    font-size: 0.6rem !important;
+  }
+
+  .siteTitulo {
+    font-size: 1.5rem;
+  }
+
+}
+
+.descPlan {
+  animation: ease-in-out 0.3s;
+  transition: ease-in-out 0.3s;
+}
+
+.descPlan:hover {
+  border-top: 3px solid rgba(0, 0, 255, 0.585);
+  border-left: 3px solid rgba(0, 0, 255, 0.585);
+  border-right: 3px solid rgba(0, 0, 255, 0.585);
+  border-bottom: 0px solid rgba(255, 255, 255, 0);
+
+  animation: border-blink 0.5s infinite alternate;
+}
+
+.descPlanMini {
+  animation: ease-in-out 0.2s;
+  transition: ease-in-out 0.2s;
+}
+
+.descPlanMini:hover {
+  border-top: 2px solid rgba(0, 0, 255, 0.585);
+  border-left: 2px solid rgba(0, 0, 255, 0.585);
+  border-right: 2px solid rgba(0, 0, 255, 0.585);
+  border-bottom: 2px solid rgba(255, 255, 255, 0);
+
+  animation: border-blink 0.2s infinite alternate;
+}
+
+@keyframes border-blink {
+  from {
+    border-color: transparent;
+  }
+
+  to {
+    border-color: rgb(106, 106, 252, 0.585);
+  }
+}
+
+
+.slide-counter {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.slide-counter .current {
+  color: #1a365d;
+  /* azul escuro */
+  font-weight: bold;
+}
+
+.slide-counter .total {
+  color: #718096;
+  /* cinza */
+}
+

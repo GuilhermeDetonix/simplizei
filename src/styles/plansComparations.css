@@ -1,0 +1,69 @@
+
+.comparison-wrapper {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #ffffff, #f4f7fa);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.comparison-wrapper h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a237e;
+  font-size: 2rem;
+  font-weight: 700;
+  animation: fadeInDown 0.6s ease-in-out;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.95rem;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.comparison-table th {
+  background-color: #f0f4ff;
+  font-weight: bold;
+  color: #1a237e;
+  font-size: 1rem;
+}
+
+.comparison-table td {
+  background-color: #ffffff;
+}
+
+.comparison-table td:hover {
+  background-color: #e3f2fd;
+}
+
+.category-row td {
+  background-color: #e6f0ff;
+  font-weight: bold;
+  text-align: left;
+  color: #0073e6;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

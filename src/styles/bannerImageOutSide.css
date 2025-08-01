@@ -1,0 +1,14 @@
+/* Efeito de zoom sutil na imagem */
+@media (min-width: 1024px) {
+  .image-container:hover img {
+    transform: scale(1.02);
+    transition: transform 0.5s ease;
+  }
+}
+
+/* Melhor legibilidade em telas pequenas */
+@media (max-width: 640px) {
+  .text-content {
+    padding: 0 1rem;
+  }
+}

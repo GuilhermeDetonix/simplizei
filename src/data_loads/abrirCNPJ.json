@@ -1,0 +1,28 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "image": "/assets/img/engenharia.jpg",
+      "alt": "Contratação PJ",
+      "title": "Contratação PJ: o que é? Como funciona e diferenças para CLT",
+      "description": "A contratação PJ funciona como um acordo comercial firmado entre duas empresas...",
+      "link": "#"
+    },
+    {
+      "id": 2,
+      "image": "/assets/img/consultoria.jpg",
+      "alt": "Simples Nacional",
+      "title": "Simples Nacional: O Que é? Guia completo, faturamento, DAS e tabela 2025",
+      "description": "Todo empreendedor precisa escolher um regime tributário ao abrir a empresa...",
+      "link": "#"
+    },
+    {
+      "id": 3,
+      "image": "/assets/img/negocios.avif",
+      "alt": "Como ser PJ",
+      "title": "Como ser PJ? Veja como é trabalhar como PJ e se tornar uma Pessoa Jurídica",
+      "description": "Para ser PJ e trabalhar como Pessoa Jurídica é preciso abrir um CNPJ...",
+      "link": "#"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+    #bannerBeneficios {
+        position: relative !important;
+        bottom: 0 !important;
+        transform: translateX(0) !important;
+        width: 100% !important;
+        left: 0 !important;
+    }
+
+    .flex.gap-4.flex-wrap {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .flex.items-center.gap-2.mb-6 {
+        display: flex !important;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+}
