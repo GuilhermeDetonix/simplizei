@@ -1,80 +1,45 @@
-// import { defineConfig } from 'vite';
-// import react from '@vitejs/plugin-react';
-// import path from 'path';
-
-// export default defineConfig({
-//   base: './',
-//   plugins: [react()],
-//   resolve: {
-//     alias: {
-//       '@': path.resolve(__dirname, 'src')
-//     }
-//   },
-//   build: {
-//     outDir: 'dist',
-//     chunkSizeWarningLimit: 1000,
-//     commonjsOptions: {
-//       transformMixedEsModules: true
-//     }
-//   }
-// });
-
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 
 export default defineConfig({
-  // base relativo garante que assets sejam carregados corretamente mesmo em subpastas
+  // Configuração base para garantir que os assets sejam carregados corretamente
   base: './',
 
   plugins: [react()],
+
+  // Configurações do servidor de desenvolvimento
   server: {
     watch: {
       usePolling: true,
       interval: 1000,
     },
     hmr: {
-      overlay: false, // Desativa erros de overlay que podem travar
+      overlay: false,
       clientPort: 5173
     },
     host: '0.0.0.0',
     port: 5173
   },
-  optimizeDeps: {
-    include: [
-      'firebase/app',
-      'firebase/auth',
-      // 'firebase/firestore',
-      // 'firebase/storage',
-    ],
-    exclude: ['firebase'], // evita conflitos
-  },
 
+  // Configurações de resolução de imports
   resolve: {
     alias: {
-      // '@' facilita imports relativos a partir de src/
-      '@': path.resolve(__dirname, 'src'),
-
-      // aliases explícitos do Firebase para evitar problemas
-      'firebase/app': 'firebase/app',
-      'firebase/auth': 'firebase/auth',
-      'firebase/firestore': 'firebase/firestore',
+      '@': path.resolve(__dirname, 'src')  // Alias para imports a partir de src/
     },
   },
 
+  // Configurações de build
   build: {
     outDir: 'dist',
     sourcemap: false,
-    chunkSizeWarningLimit: 1000, // aumenta limite para evitar warnings
+    chunkSizeWarningLimit: 1000,  // Aumenta limite para evitar warnings
 
-    commonjsOptions: {
-      transformMixedEsModules: true, // importante para firebase
-    },
-
+    // Opções para Rollup
     rollupOptions: {
       output: {
         manualChunks(id) {
-          // separa node_modules em vendor para melhor cache e performance
+          // Separa node_modules em vendor para melhor cache
           if (id.includes('node_modules')) {
             return 'vendor';
           }
