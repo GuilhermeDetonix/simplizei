@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "vite.config.js",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "dist"
@@ -18,20 +18,9 @@
       "continue": true
     },
     {
-      "src": "/usuario",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/painel-do-usuario/(.*)",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/profile-usuario/(.*)",
-      "dest": "/index.html"
-    },
-    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/index.html",
+      "status": 200
     }
   ]
 }
